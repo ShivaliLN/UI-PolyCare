@@ -150,7 +150,7 @@ export default function Donate() {
         <InputNumber style={{
             width: '30%',
           }}
-          prefix="♾️" min={0.0001} defaultValue={1}/>
+          prefix="♾️" min={0.0001}/>
         </Form.Item>
         <div style={{textAlign: "center"}}>
         <Button
