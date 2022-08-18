@@ -23,7 +23,8 @@ import Donate from "components/Donate";
 import Statistics from "components/Statistics";
 import Governance from "components/Governance";
 import NFTMint from "components/NFTMint"
-import Contract from "components/Contract/Contract";
+import ContractInfo from "components/ContractInfo"
+//import Contract from "components/Contract/Contract";
 import Text from "antd/lib/typography/Text";
 //import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
@@ -72,10 +73,11 @@ const App = ({ isServerInfo }) => {
   }, [isAuthenticated, isWeb3Enabled]);
 
   return (
-    <Layout style={{ height: "100vh", overflow: "auto", background: "#353636" }}>
+    <Layout style={{ height: "100vh", overflow: "auto", background: "#bca0dc" }}>
       
       <Router>
-        <Header style={styles.header}>        
+        <Header style={styles.header}> 
+        <div style={{textAlign: "left"}}> <Image alt= "PolyCare Logo" width={95} height={95} src="logo.png"> </Image>  </div>             
           <MenuItems />
           <div style={styles.headerRight}>
           <Chains />            
@@ -85,6 +87,7 @@ const App = ({ isServerInfo }) => {
         </Header>
 
         <div style={styles.content}>
+        
           <Switch>
             <Route exact path="/quickstart">
               <QuickStart isServerInfo={isServerInfo} />
@@ -101,8 +104,8 @@ const App = ({ isServerInfo }) => {
             <Route path="/statistics">
               <Statistics />
             </Route>
-            <Route path="/contract">
-              <Contract />
+            <Route path="/contractInfo">
+              <ContractInfo />
             </Route>
             <Route path="/">
               <Redirect to="/quickstart" />
@@ -116,11 +119,10 @@ const App = ({ isServerInfo }) => {
           </Switch>
         </div>
       </Router>
-      <Footer style={{ textAlign: "center" , background: "#353636" }}>     
+      <Footer style={{ textAlign: "center" , background: "#bca0dc" }}>     
       <Typography.Title level={5}><Text style={{ display: "block" }}>
-        ⭐️ Copyright © 2022 All rights reserved - PolyCare
-        </Text></Typography.Title>       
-        <Image width={350} height={350} src="logo.png"> </Image>
+      Made with ❤️ at Polygon BUIDL IT : Summer 2022 
+        </Text></Typography.Title>     
       </Footer>
     </Layout>
   );

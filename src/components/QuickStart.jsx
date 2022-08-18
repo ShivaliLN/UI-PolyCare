@@ -1,4 +1,4 @@
-import { Card, Typography, Timeline } from "antd";
+import { Card, Typography, Timeline, Image } from "antd";
 import { ClockCircleOutlined } from '@ant-design/icons';
 import React from "react";
 //import { useMoralis } from "react-moralis";
@@ -34,7 +34,9 @@ export default function QuickStart() {
         style={styles.card}
         title={
           <>
+           <div style={{textAlign: "center"}}> <Image alt= "PolyCare Logo" width={150} height={150} src="logo.png"> </Image>  </div>
             📝 <Text strong>About</Text>
+           
           </>
         }
       >

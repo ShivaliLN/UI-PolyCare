@@ -44,8 +44,8 @@ function MenuItems() {
       <Menu.Item key="/nftMint">
         <NavLink to="/nftMint">🖼 Mint NFTs</NavLink>
       </Menu.Item>
-      <Menu.Item key="/contract">
-        <NavLink to="/contract">📄 PolyCare Contract</NavLink>
+      <Menu.Item key="/contractInfo">
+        <NavLink to="/contractInfo">📄 PolyCare Contract</NavLink>
       </Menu.Item>
     </Menu>
   );
