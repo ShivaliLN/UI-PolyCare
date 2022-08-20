@@ -1,5 +1,5 @@
-import { Card, Typography, Image, Button, Popover, Form, InputNumber, Input, message, Table, Space, Radio  } from "antd";
-//import { ClockCircleOutlined } from '@ant-design/icons';
+import { Card, Typography, Image, Button, Popover, Form, InputNumber, Input, message, Table, Space, Radio } from "antd";
+//import { InboxOutlined } from '@ant-design/icons';
 import React, { useState }from "react";
 import { Moralis } from "moralis";
 //import {abi} from './GovernorContract.json';
@@ -32,7 +32,7 @@ const styles = {
   let proposalId = [];
   let description = [];
  
-
+  
 export default function Governance() {
   
   const [form] = Form.useForm();
@@ -287,6 +287,18 @@ export default function Governance() {
       </Space>)
     });
   } 
+  const [values, setValues] = useState({ message: ""});	
+
+  async function uploadIPFS(){
+    const fileInput = document.getElementById("file")
+    const data = fileInput.files[0]
+    console.log(data)
+    const file = new Moralis.File(data.name, data);
+    await file.saveIPFS();
+    console.log(file.ipfs(), file.hash())
+    setValues({ ...values, message: file.ipfs() })
+  }
+  
 
     return (
         <div style={{ display: "flex", gap: "10px" }}>
@@ -378,14 +390,29 @@ export default function Governance() {
     >     
     <TextArea rows={4} placeholder="Proposal Title
 ## Summary
-
 Insert your summary here
-
+##Relevant Document IPFS URLs
+Insert your Supporting Document IPFS URLs here
 ##Description
-
 Insert your Description here"  />
-  </Form.Item>          
-  
+  </Form.Item> 
+
+  <input
+        type="file"
+        name="file"
+        id="file"
+      />  
+      Your IPFS Link: {values.message}
+      <Button
+    type="dashed"
+    size="small"
+    style={{width: "100%", marginTop: "25px" }}
+    onClick={uploadIPFS}
+     >
+    Upload Supporting Documents to IPFS 
+  </Button>
+
+
   <div style={{textAlign: "center"}}>
   <Button
     type="primary"
