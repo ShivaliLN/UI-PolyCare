@@ -68,6 +68,22 @@ export default function Governance() {
     });
   };
 
+  const openMessage2 = () => {
+    message.loading({
+      content: "Delegating...",
+      key,
+      duration: 0,
+    });
+  };
+/*
+  const openMessage3 = () => {
+    message.loading({
+      content: "Casting Vote...",
+      key,
+      duration: 0,
+    });
+  };
+*/
   async function proposeSmartContract() {
     console.log("In here11")
     console.log(form.getFieldValue(["proposal", "to"]));
@@ -90,7 +106,7 @@ export default function Governance() {
     try {
       //const treasury = new ethers.utils.Interface(ABI2)
       const treasury = new ethers.utils.Interface(treasuryContract.abi)
-      const encodedFunctionCall = treasury.encodeFunctionData("releaseFunds", [77, form.getFieldValue(["proposal", "to"]), form.getFieldValue(["proposal", "name"]), form.getFieldValue(["proposal", "donationAmt"])])
+      const encodedFunctionCall = treasury.encodeFunctionData("releaseFunds", [form.getFieldValue(["proposal", "to"]), form.getFieldValue(["proposal", "name"]), form.getFieldValue(["proposal", "donationAmt"])])
       const transaction = await contract.propose(
         [form.getFieldValue(["proposal", "to"])],
         [0],
@@ -142,7 +158,7 @@ export default function Governance() {
       }      
             
       console.log(transaction.hash);
-      openMessage();
+      openMessage2();
       await transaction.wait().then(() => {
         message.success({
           content: "Congratulations delegation successfull!",
@@ -182,7 +198,7 @@ export default function Governance() {
     console.log(await contract.proposalSnapshot(proposalId))
     console.log(await contract.getVotes("0x861cadb50533f288313207a140a107e8ad9ee8c6", blocknumber)) 
     console.log(await contract.getVotes("0x3e716a009c4a2e0dd38a907414bbd3505c686b2b", blocknumber))
-       
+     /*  
     try {
       const transaction = await contract.castVote(
         proposalId,
@@ -191,10 +207,10 @@ export default function Governance() {
       
       console.log(transaction.hash);
             
-      openMessage();
+      openMessage3();
       await transaction.wait().then(() => {
         message.success({
-          content: "Congratulations vote successfull!",
+          content: "Congratulations vote successful!",
           key,
           duration: 3,
         });
@@ -203,7 +219,8 @@ export default function Governance() {
      
     } catch (err) {
       console.log(err);
-    }   
+    }  
+    */ 
   }
   //const findProposals = async () => {
   async function findProposals() {
