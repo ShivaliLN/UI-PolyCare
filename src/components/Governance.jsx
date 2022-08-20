@@ -78,11 +78,15 @@ export default function Governance() {
     const signer = web3Provider.getSigner();
 
     const contract = new ethers.Contract(
-      "0x00aF7473B838ebB8E8e505FE383a29db8aE1e2A9",
+      "0x00b871CDa06eB9E969fFa4Fe3227AB0f8a6f5531",
       governor.abi, //ABI
       signer,
     ); 
-       
+    
+    const blocknumber = (await web3Provider.getBlockNumber()-1);
+    const tokenBalance = await contract.getVotes(Moralis.account, blocknumber)
+    console.log(ethers.utils.formatEther(tokenBalance))
+    
     try {
       //const treasury = new ethers.utils.Interface(ABI2)
       const treasury = new ethers.utils.Interface(treasuryContract.abi)
@@ -162,7 +166,7 @@ export default function Governance() {
     const signer = web3Provider.getSigner();
 
     const contract = new ethers.Contract(
-      "0x00aF7473B838ebB8E8e505FE383a29db8aE1e2A9",
+      "0x00b871CDa06eB9E969fFa4Fe3227AB0f8a6f5531",
       governor.abi, //ABI
       signer,
     ); 
@@ -172,7 +176,13 @@ export default function Governance() {
     
     let proposalDeadline = await contract.proposalDeadline(proposalId)
     console.log(`Current Proposal proposalDeadline: ${proposalDeadline}`)  
-    
+    console.log(await contract.proposalVotes(proposalId))
+    const blocknumber = (await web3Provider.getBlockNumber()-1);
+    console.log(await contract.quorum(blocknumber))  
+    console.log(await contract.proposalSnapshot(proposalId))
+    console.log(await contract.getVotes("0x861cadb50533f288313207a140a107e8ad9ee8c6", blocknumber)) 
+    console.log(await contract.getVotes("0x3e716a009c4a2e0dd38a907414bbd3505c686b2b", blocknumber))
+       
     try {
       const transaction = await contract.castVote(
         proposalId,
@@ -190,12 +200,10 @@ export default function Governance() {
         });
         form.resetFields();
       });
-      
+     
     } catch (err) {
       console.log(err);
-    }    
-
-
+    }   
   }
   //const findProposals = async () => {
   async function findProposals() {
