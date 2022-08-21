@@ -31,6 +31,22 @@ export default function NFTMint() {
     });
   };
 
+  const openMessage2 = () => {
+    message.loading({
+      content: "Adding NFT...",
+      key,
+      duration: 0,
+    });
+  };
+
+  const openMessage3 = () => {
+    message.loading({
+      content: "Minting SVG NFT...",
+      key,
+      duration: 0,
+    });
+  };
+
   async function callSmartContract(id) {
     console.log("In here11")
     const ethers = Moralis.web3Library; // get ethers.js library
@@ -47,7 +63,7 @@ export default function NFTMint() {
       console.log("ID that came" + id);
       let transaction;      
         transaction = await contract.mint(
-          id, "1"
+          id
         );    
       console.log(transaction.hash);
       openMessage();
@@ -82,7 +98,7 @@ export default function NFTMint() {
           3
         );    
       console.log(transaction.hash);
-      openMessage();
+      openMessage3();
       await transaction.wait().then(() => {
         message.success({
           content: "Congratulations SVG Minted!",
@@ -129,10 +145,10 @@ export default function NFTMint() {
           5000, file.hash()   
         );    
       console.log(transaction.hash);
-      openMessage();
+      openMessage2();
       await transaction.wait().then(() => {
         message.success({
-          content: "Congratulations Token Added!",
+          content: "Congratulations NFT Metadata Added!",
           key,
           duration: 3,
         });

@@ -95,6 +95,14 @@ export default function Governance() {
     });
   };
 
+  const openMessage5 = () => {
+    message.loading({
+      content: "Executing Proposal...",
+      key,
+      duration: 0,
+    });
+  };
+
   async function proposeSmartContract() {
     console.log("In here11")
     console.log(form.getFieldValue(["proposal", "to"]));
@@ -452,7 +460,7 @@ export default function Governance() {
       
       console.log(transaction.hash);
             
-      openMessage4();
+      openMessage5();
       await transaction.wait().then(() => {
         message.success({
           content: "Congratulations proposal executed!",
