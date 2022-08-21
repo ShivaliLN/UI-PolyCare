@@ -40,11 +40,17 @@ export default function ContractInfo() {
         }
       >
         <Text>
-        <br/>Treasury Contract at:  0x541607EF0081c5A932aE020ABE5da119B9427272
-        <br/>Donation and Token Contract at:  0x0cd73F6cbe32FF4815E6FefF9852907b0Ad1D809
-        <br/>Governance Contract at: 0x58e332dDA542Fc2CFeB2464e84280d0751779a0e
-        <br/>NFT Contract at: 0xc791e3E5Ae44172Fe79FF670b1554Ab92160B151
-        <br/>SVG Contract at: 0xFe5f4b8531C69F2B30388fAaD3dF99a14d0D997b
+        <br/>Treasury deployed at: <a>https://mumbai.polygonscan.com/address/0x541607EF0081c5A932aE020ABE5da119B9427272</a>
+        <br/>
+        <br/>PolyCareMain deployed at: <a>https://mumbai.polygonscan.com/address/0x0cd73F6cbe32FF4815E6FefF9852907b0Ad1D809</a>
+        <br/>
+        <br/>TimeLock deployed at: <a>https://mumbai.polygonscan.com/address/0xB6d1Bf81a33c8F2A2Ed7Fcda8Cd96059E472528f</a>
+        <br/>
+        <br/>GovernorContract deployed at: <a>https://mumbai.polygonscan.com/address/0x58e332dDA542Fc2CFeB2464e84280d0751779a0e</a>
+        <br/>
+        <br/>NFTContract deployed at: <a>https://mumbai.polygonscan.com/address/0xc791e3E5Ae44172Fe79FF670b1554Ab92160B151</a>
+        <br/>
+        <br/>PolyCareSVG deployed at: <a>https://mumbai.polygonscan.com/address/0xFe5f4b8531C69F2B30388fAaD3dF99a14d0D997b</a>
     </Text>
       </Card>
     </div>
