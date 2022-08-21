@@ -93,15 +93,10 @@ PolyCare Architecture
 
 # DApp hosted here
 
-    ```sh
     https://hqxotfxpqma0.usemoralis.com
-    ```
 
 # Run test from local
 
-    ```sh
     git clone https://github.com/ShivaliLN/PolyCare.git
-    ```
-    ```sh
+
     npx hardhat test
-    ```
