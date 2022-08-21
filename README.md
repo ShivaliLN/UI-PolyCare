@@ -1,4 +1,4 @@
-![](./logo.png)
+![](./logosmall.png)
 
 ## Overview
 
@@ -74,3 +74,12 @@ PolyCare Architecture
 
 - PolyCare UI -> https://github.com/ShivaliLN/UI-PolyCare.git
 - PolyCare Contracts -> https://github.com/ShivaliLN/PolyCare.git
+
+**Polygon Mumbai Testnet Contracts**
+
+- Treasury deployed at: https://mumbai.polygonscan.com/address/0x541607EF0081c5A932aE020ABE5da119B9427272
+- PolyCareMain deployed at: https://mumbai.polygonscan.com/address/0x0cd73F6cbe32FF4815E6FefF9852907b0Ad1D809
+- TimeLock deployed at: https://mumbai.polygonscan.com/address/0xB6d1Bf81a33c8F2A2Ed7Fcda8Cd96059E472528f
+- GovernorContract deployed at: https://mumbai.polygonscan.com/address/0x58e332dDA542Fc2CFeB2464e84280d0751779a0e
+- NFTContract deployed at: https://mumbai.polygonscan.com/address/0xc791e3E5Ae44172Fe79FF670b1554Ab92160B151
+- PolyCareSVG deployed at: https://mumbai.polygonscan.com/address/0xFe5f4b8531C69F2B30388fAaD3dF99a14d0D997b
