@@ -29,7 +29,7 @@ PolyCare aims to provide a platform where you can donate funds and participate i
 
 - Step 6 - Under **Mint NFT** tab - if you are a donor to PolyCare you can add NFT to the contract which will then be available for minting. Just provide, oraganization name that received the funds, image CID and amount that was donated.
 
-- Step 7 - **Mint SVG NFT** - if you read this far, here is one more surprise for you (pun intended). If you donated to the protocol, you can mint 100% on-chain svg badge as token of thank you with the 'Name' of the organization that received the funds by providing the token id.
+- Step 7 - **Mint SVG NFT** - if you read this far, here is one more surprise for you (kidding). If you donated to the protocol, you can mint 100% on-chain svg badge as token of thank you with the 'Name' of the organization that received the funds by providing the token id.
 
 ## How I built it
 
@@ -97,8 +97,9 @@ https://hqxotfxpqma0.usemoralis.com
 
 # Run test from local
 
-    git clone https://github.com/ShivaliLN/PolyCare.git
+git clone https://github.com/ShivaliLN/PolyCare.git
 
 #
 
-    npx hardhat test
+yarn install
+npx hardhat test
