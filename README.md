@@ -75,7 +75,14 @@ PolyCare Architecture
 - PolyCare UI -> https://github.com/ShivaliLN/UI-PolyCare.git
 - PolyCare Contracts -> https://github.com/ShivaliLN/PolyCare.git
 
-**Polygon Mumbai Testnet Contracts**
+## Roadmap
+
+- Complete the remaining open items like, dynamic data display
+- Plannig to incentivize the proposal creator whoes proposals are passed to keep the motivation going
+
+## Technical details
+
+# Polygon Testnet Deployed Contracts
 
 - Treasury deployed at: https://mumbai.polygonscan.com/address/0x541607EF0081c5A932aE020ABE5da119B9427272
 - PolyCareMain deployed at: https://mumbai.polygonscan.com/address/0x0cd73F6cbe32FF4815E6FefF9852907b0Ad1D809
@@ -83,3 +90,18 @@ PolyCare Architecture
 - GovernorContract deployed at: https://mumbai.polygonscan.com/address/0x58e332dDA542Fc2CFeB2464e84280d0751779a0e
 - NFTContract deployed at: https://mumbai.polygonscan.com/address/0xc791e3E5Ae44172Fe79FF670b1554Ab92160B151
 - PolyCareSVG deployed at: https://mumbai.polygonscan.com/address/0xFe5f4b8531C69F2B30388fAaD3dF99a14d0D997b
+
+# DApp hosted here
+
+    ```sh
+    https://hqxotfxpqma0.usemoralis.com
+    ```
+
+# Run test from local
+
+    ```sh
+    git clone https://github.com/ShivaliLN/PolyCare.git
+    ```
+    ```sh
+    npx hardhat test
+    ```
