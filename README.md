@@ -97,9 +97,9 @@ https://hqxotfxpqma0.usemoralis.com
 
 # Run test from local
 
-git clone https://github.com/ShivaliLN/PolyCare.git
+    git clone https://github.com/ShivaliLN/PolyCare.git
 
 #
 
-yarn install
-npx hardhat test
+    yarn install
+    npx hardhat test
