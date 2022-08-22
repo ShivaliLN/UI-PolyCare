@@ -4,15 +4,15 @@
 
 **PolyCare** is the first fully decentralized **charity & fundraising** application which is focused on two main aspects:
 
-1. Bringing **orphanages and oldage homes** together by providing financial assistance to Oldage homes who are willing to provide daycare/childcare services to orphanages.
+1. Bringing **orphanages and old age homes** together by providing financial assistance to old age homes who are willing to provide daycare/childcare services to orphanages.
 2. It is also a **Web3 version of https://www.ketto.org/ Web2 platform** where if you have donated to the protocol, you can start a proposal for raising funds for any medical treatment or other causes.
 
 [Video Presentation](here)
 
 ## Inspiration
 
-I got my inspiration for this project when I saw a [Linkedin post](https://www.linkedin.com/posts/prerna-goel-038454bb_brilliant-idea-being-implemented-in-canada-activity-6853272506615300096-wIHa?utm_source=linkedin_share&utm_medium=ios_app).
-The idea seemed brilliant but at the end of the day to provide childcare service needs financial assistance.
+My project is inspired by a [Linkedin post](https://www.linkedin.com/posts/prerna-goel-038454bb_brilliant-idea-being-implemented-in-canada-activity-6853272506615300096-wIHa?utm_source=linkedin_share&utm_medium=ios_app) which stated that somewhere they combined nursing homes with the orphanages. The result exceeded all expectations! Elders found grandchildren, orphans experienced the love and care of a parent. The idea seemed brilliant but at the end of the day to provide childcare service needs financial assistance.
+Also, currently there is no decentralized way to support any social cause like these.
 PolyCare aims to provide a platform where you can donate funds and participate in governance to ensure that your funds reaches to the cause that you support.
 
 **Disclaimer** : This project is a proof of concept. The full-blown application is on the roadmap.
@@ -21,9 +21,9 @@ PolyCare aims to provide a platform where you can donate funds and participate i
 
 - Step 1 - Under **Donate** tab - Donate to PolyCare as little as 0.0001 Matic. You can choose if you wish to participate in the Governance Protocol. If yes, PolycareToken(PCT) tokens will be minted depending upon your donation amount.
 
-- Step 2 - Under **Governance** tab - users with certain amount of Polycare Tokens can create a proposal (assumption is you or someone you know volunteers and works with the Oldage Homes and Orphanage is your area, determine the expenditure amount and submit proposal with **supporting documents**)
+- Step 2 - Under **Governance** tab - users with certain amount of Polycare Tokens can create a proposal (assumption is you or someone you know volunteers and works with the old age Homes and Orphanage is your area, determine the expenditure amount and submit proposal with **supporting documents**)
 - Step 3 - Proposal goes through governance process where users with PCT token can delegate vote to someone or themself and participate in governance.
-- Step 4 - If the proposal is passed, funds are released to the Oldage home.
+- Step 4 - If the proposal is passed, funds are released to the old age home.
 
 - Step 5 - Under **PolyCare Statistics** tab - see the latest statistics for total donation amount till date, total balance remaining and total amount released to passed proposals.
 

@@ -125,7 +125,7 @@ export default function Governance() {
     try {
       //const treasury = new ethers.utils.Interface(ABI2)
       const treasury = new ethers.utils.Interface(treasuryContract.abi)
-      const amount = ethers.utils.parseEther(form.getFieldValue(["proposal", "donationAmt"]))
+      const amount = ethers.utils.parseEther((form.getFieldValue(["proposal", "donationAmt"])).toString())
       const encodedFunctionCall = treasury.encodeFunctionData("releaseFunds", [form.getFieldValue(["proposal", "to"]), form.getFieldValue(["proposal", "name"]),amount])
            
       
@@ -289,6 +289,8 @@ export default function Governance() {
       title: 'Key',
       dataIndex: 'key',
       key: 'key',
+      sortOrder: 'acsend',
+      sorter:'true'
     },
     {
       title: 'Proposal Id',
@@ -693,7 +695,7 @@ Insert your Description here"  />
                 <br/>
                 <br/>
                 <br/>
-                <Table dataSource={dataSource} columns={columns} size="small"/>
+                <Table dataSource={dataSource} columns={columns} size="small" bordered="true"/>
             </Card>    
             </div>
             </div>
